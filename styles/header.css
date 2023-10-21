@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative; /* Por defeito a position inicial é "static" ao tornar relativa ela permite outras definições */
 }
 
 .container {
@@ -21,4 +22,38 @@
 
 .container__imagem {
     padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute; /* Porque lá em cima definimos "relative" o nosso "absolute" pode funcionar */
+    top: 100%; /* Como tem absolute, podemos usar o top:100% para colocar a lista pra baixo */
+    width: 60vw;
+    font-family: var(--font-principal);
+    font-weight: 400;
+    font-size: 1em;
+}
+
+.container__botao:checked~.lista-menu { /* o "~" é um combinador, funciona como se fosse uma condicional, tipo um "if"  */
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo {
+    color: var(--cor-titulo);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    text-decoration: none;
 }
