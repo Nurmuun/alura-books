@@ -31,7 +31,7 @@
     width: 60vw;
     font-family: var(--font-principal);
     font-weight: 400;
-    font-size: 1em;
+    font-size: 1em; /* Ela usou 16px */
 }
 
 .container__botao:checked~.lista-menu { /* o "~" é um combinador, funciona como se fosse uma condicional, tipo um "if"  */
@@ -56,4 +56,12 @@
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+.container__botao {
+    display: none;
+}
+
+.container__imagem:hover {
+    background-color: var(--azul-degrade);
 }
