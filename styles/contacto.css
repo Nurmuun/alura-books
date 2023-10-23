@@ -25,8 +25,22 @@
     padding: 1em;
     border: 1px solid var(--azul);
     border-radius: 24px;
-    width: calc(90% - 2em);
-    padding-left: 3em;
+    width: 90%;
+    padding-left: 1em;
+}
+
+@-moz-document url-prefix() {
+    .contacto__email:placeholder-shown {
+        width: calc(90% - 2em);
+        padding-left: 3em;
+    }
+}
+
+.contacto__email::placeholder {
+    font-family: var(--font-principal);
+    color: var(--azul);
+    background: url(../assets/Email.svg) no-repeat;
+    padding-left: 2em;
 }
 
 .contacto__email::-moz-placeholder {
