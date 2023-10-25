@@ -65,3 +65,52 @@
 .container__imagem:hover {
     background-color: var(--azul-degrade);
 }
+
+.container__titulo {
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+/* Para tablet */
+
+@media screen and (min-width: 1024px) {
+    
+    .container__titulo,
+    .container__titulo__negrito {
+        font-family: var(--font-secundaria);
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    .container__titulo {
+        font-family: var(--font-secundaria);
+        font-weight: 400;
+        font-size: 30px;
+        display: block;
+    }
+
+    .opcoes {
+        display: flex;
+    }
+
+    .opcoes__item {
+        padding: 0 1em;
+        text-transform: uppercase;
+    }
+
+    .opcoes a {
+        text-decoration: none;
+        color: var(--preto);
+    }
+
+    #coracao {
+        display: none;
+    }
+
+    .cabecalho__menu-hamburger {
+        display: none;
+    }
+}
