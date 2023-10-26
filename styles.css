@@ -16,7 +16,9 @@
     --branco: #FFFFFF;
     --cor-titulo:#EB9B00;
     --azul: #002F52;
-    --preto: rgba(0, 0, 0, 0.85); 
+    --preto: rgba(0, 0, 0, 0.85);
+    --cinza: #858585;
+    --cinza-rodape: #474646; 
     --azul-degrade: linear-gradient(98deg, #002F52 35.49%, #326589 165.37%);
     --font-principal: 'Poppins', sans-serif;
     --font-secundaria: 'Josefin Sans', sans-serif;

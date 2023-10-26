@@ -48,3 +48,23 @@
     color: var(--azul);
     background: url(../assets/Email.svg) no-repeat 1em 1em;
 }
+
+@media screen and (min-width: 1024px) {
+    .contacto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .contacto__descricao {
+        margin-right: 1em;
+    }
+
+    .contacto__email {
+        width: 30%;
+    }
+
+    .contacto__titulo {
+        font-size: 24px;
+    }
+}
