@@ -74,6 +74,23 @@
     display: none;
 }
 
+.container__texto {
+    display: none;
+}
+
+.container__botao:checked ~ .container__rotulo > .cabecalho__menu-hamburger { /* o til relaciona com a proxima classe, ou seja o container botao é aquele visto que está oculto. O checked é o elemento ativo. E a alteração é no menu hamburger quando este está ativo */
+    background-image: url(../assets/Menu\ Aberto.svg);
+}
+
+.container__botao:checked ~ .container__rotulo { /* O background fica fora da classe que leva o svg */
+    background: var(--azul-degrade);
+}
+
+.opcoes__item__link {
+    text-decoration: none;
+    color: var(--preto);
+}
+
 /* Para tablet */
 
 @media screen and (min-width: 1024px) {
@@ -101,7 +118,7 @@
         text-transform: uppercase;
     }
 
-    .opcoes a {
+    .lista-menu__item {
         text-decoration: none;
         color: var(--preto);
     }
@@ -123,6 +140,44 @@
         display: none;
     } 
 
+    .opcoes__botao:checked ~ .opcoes__rotulo > .opcoes__item {
+        background: var(--azul-degrade);
+        color: var(--branco);
+    }
 
+    .opcoes__item {
+        padding: 2em 1em;
+    }
 
+    .lista-menu__item:hover {
+        background: var(--azul-degrade);
+    }
+
+    .lista-menu__item:hover > .lista-menu__link {
+        -webkit-text-fill-color: var(--branco);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .container__link {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+    }
+
+    .container__texto {
+        color: var(--preto);
+        font-size: 20px;
+        font-weight: 400;
+        display: block;
+    }
+
+    .cabecalho {
+        padding: 0 2em;
+    }
+
+    .opcoes {
+        margin-right: auto;
+    }    
 }
